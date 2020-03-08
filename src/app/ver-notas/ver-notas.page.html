@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{nota.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="secondary">
+    <ion-card-header>
+      <ion-card-subtitle>{{nota.createdAt | date: 'short'}}</ion-card-subtitle>
+      <ion-card-title>{{nota.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p align="justify">{{nota.content}}</p>
+      <br>
+      <ion-button slot="start" color="warning" [routerLink]="'/modificar-notas/' + nota.id">Editar</ion-button>
+      <ion-button slot="end" color="danger" (click)="BorrarNotas()">Borrar</ion-button>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

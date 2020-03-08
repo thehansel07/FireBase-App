@@ -1,0 +1,21 @@
+.title-block{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-color: black;
+  color: white;
+  height: 160px;
+}
+
+.title-block .heading{
+  font-size: 35px;
+  color:yellow;
+  font-family: fantasy;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Arial Black"
+}

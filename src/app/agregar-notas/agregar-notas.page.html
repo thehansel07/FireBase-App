@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Nueva Nota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-input placeholder="Enter Titulo" [(ngModel)]="nota.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea rows="6" [(ngModel)]="nota.content" placeholder="Click aqui para mas info..."></ion-textarea>
+  </ion-item>
+</ion-list>
+  <ion-button color="primary" expand="full" (click)="AgregarNota()">Crear</ion-button>
+</ion-content>

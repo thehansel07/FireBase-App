@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      App-Notas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="title-block">
+    <div class="heading">Mis Notas</div>
+  </div>
+  <ion-searchbar>
+  </ion-searchbar>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Notas</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let notas of (notas | async)">
+      <ion-thumbnail slot="start">
+        <img src="https://icon-icons.com/icons2/81/PNG/96/notepad_bloc_notes_15549.png" alt="">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{notas.title}}</h2>
+        <p>{{notas.content}}</p>
+      </ion-label>
+      <ion-button fill="outline" slot="end" [routerLink]="'/ver-notas/'+notas.id">Ver</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="'/agregar-notas'">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
